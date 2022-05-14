@@ -1,0 +1,15 @@
+
+node
+{
+   
+    stage('CheckoutCode')
+    {
+        git branch: 'development', credentialsId: '4abfd17d-9666-4b43-a214-d6b2bd4d5006', 
+        url: 'https://github.com/Maheswar22/maven-web-application.git'
+    }
+    stage('Build')
+    {
+        sh "echo 'Hello world'"
+        sh "echo '${name}'"
+    }
+ }
